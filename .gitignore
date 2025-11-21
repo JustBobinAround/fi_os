@@ -1,1 +1,5 @@
 /target
+/fi_kernel/target
+/fi_stdlib/target
+/fi_uefi/target
+/drive

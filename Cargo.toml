@@ -3,4 +3,22 @@ name = "fi_os"
 version = "0.1.0"
 edition = "2024"
 
+[[bin]]
+name = "fi_os"
+test = false
+bench = false
+path = "src/main.rs"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
+[workspace]
+resolver = "3"
+members = ["fi_stdlib", "fi_uefi"]
+
 [dependencies]
+fi_uefi = {path = "./fi_uefi"}
+fi_stdlib = {path = "./fi_stdlib"}
